@@ -1,6 +1,7 @@
 import React from 'react';
 import {View,TouchableOpacity,Text,StyleSheet} from 'react-native';
 import { Ionicons } from "@expo/vector-icons";
+import { colors } from '../config/constants';
 
 const ContactRow = ({name,subtitle,onPress}) => {
     return (
@@ -35,7 +36,7 @@ const styles = StyleSheet.create({
     height: 56,
     width: 56,
     borderRadius: 28,
-    backgroundColor: "#2196f3",
+    backgroundColor: colors.primary,
     alignItems: "center",
     justifyContent: "center",
   },

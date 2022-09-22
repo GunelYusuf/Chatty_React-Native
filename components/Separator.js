@@ -1,5 +1,6 @@
 import React from 'react';
-import {View,StyleSheet} from 'react-native'
+import {View,StyleSheet} from 'react-native';
+import {colors} from '../config/constants';
 
 const Separator = () => {
     return (
@@ -13,7 +14,7 @@ const styles = StyleSheet.create({
   separator: 
   {
       height: StyleSheet.hairlineWidth,
-      color: "#E2E2E2",
+      color: colors.border,
       marginStart: 88,
   },
 });

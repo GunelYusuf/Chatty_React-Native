@@ -6,6 +6,7 @@ import Chats from './screens/Chats';
 import Settings from './screens/Settings';
 import { Ionicons } from "@expo/vector-icons";
 import { colors } from './config/constants';
+import Signup from './screens/Signup'
 
 
 const ChatsStack = createStackNavigator()
@@ -42,7 +43,6 @@ const TabsScreen = () => (
           iconName = focused ? "settings" : "settings-outline";
         }
 
-        // You can return any component that you like here!
         return <Ionicons name={iconName} size={size} color={color} />;
       },
       tabBarActiveTintColor: colors.primary,
@@ -59,8 +59,9 @@ const MainStack = createStackNavigator()
 const App = () =>{
   return(
     <NavigationContainer>
-       <MainStack.Navigator headerMode="none">
+       <MainStack.Navigator headerMode="none" mode="modal">
           <MainStack.Screen  name="Tabs" component={TabsScreen}/>
+          <MainStack.Screen name='Signup' component={Signup}/>
        </MainStack.Navigator>
     </NavigationContainer>
   )
